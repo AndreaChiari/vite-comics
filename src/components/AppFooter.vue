@@ -52,7 +52,7 @@ export default {
                     </div>
                 </div>
                 <figure class="figure-jumbotron">
-                    <img class="img-jumbotron" src="../assets/img/dc-logo.png" alt="dc-logo.png">
+                    <img class="img-jumbotron" src="../assets/img/dc-logo-bg.png" alt="dc-logo.png">
                 </figure>
             </section>
         </div>
