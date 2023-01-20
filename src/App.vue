@@ -1,23 +1,21 @@
 <script>
 
 import AppHeader from './components/AppHeader.vue'
-import Main from './components/main.vue'
+import AppMain from './components/AppMain.vue'
 import Footer from './components/footer.vue'
 
 export default {
   name: 'vite comics',
   components: {
-    AppHeader, Main, Footer
+    AppHeader, AppMain, Footer
   }
 }
 </script>
 
 <template>
-  <div class="main-container">
-    <AppHeader></AppHeader>
-    <main></main>
-    <footer></footer>
-  </div>
+  <AppHeader></AppHeader>
+  <AppMain></AppMain>
+  <footer></footer>
 </template>
 
 <style>

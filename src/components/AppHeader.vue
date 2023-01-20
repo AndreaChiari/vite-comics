@@ -77,8 +77,10 @@ export default {
 
 <style scoped lang="scss">
 @use '../assets/scss/colors.scss' as *;
+@use '../assets/scss/mixin.scss' as *;
 
 div {
+    @include container;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -94,11 +96,15 @@ div {
         list-style-type: none;
 
         li {
-            margin-right: 10px;
+            margin-left: 10px;
 
             a {
                 color: $color-black;
                 text-decoration: none;
+
+                &:hover {
+                    color: $color-blue;
+                }
             }
         }
 
