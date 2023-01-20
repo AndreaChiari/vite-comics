@@ -76,6 +76,8 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use '../assets/scss/colors.scss' as *;
+
 div {
     margin-top: 10px;
     display: flex;
@@ -95,6 +97,7 @@ div {
             margin-right: 10px;
 
             a {
+                color: $color-black;
                 text-decoration: none;
             }
         }
