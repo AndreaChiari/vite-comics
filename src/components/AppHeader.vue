@@ -88,6 +88,10 @@ div {
 
     figure {
         width: 20%;
+
+        img {
+            @include img-fluid;
+        }
     }
 
     ul {

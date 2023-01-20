@@ -2,12 +2,12 @@
 
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-import Footer from './components/footer.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   name: 'vite comics',
   components: {
-    AppHeader, AppMain, Footer
+    AppHeader, AppMain, AppFooter,
   }
 }
 </script>
@@ -15,7 +15,7 @@ export default {
 <template>
   <AppHeader></AppHeader>
   <AppMain></AppMain>
-  <footer></footer>
+  <AppFooter></AppFooter>
 </template>
 
 <style>
@@ -25,11 +25,6 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .main-container {
