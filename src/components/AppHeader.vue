@@ -1,9 +1,9 @@
 <script>
 export default {
-    name: 'Header',
+    name: 'AppHeader',
     data() {
         return {
-            headerList: [
+            HeaderList: [
                 {
                     text: 'Characters',
                     url: '#',
@@ -63,9 +63,42 @@ export default {
 </script>
 
 <template>
-
+    <header>
+        <div>
+            <figure>
+                <img src="../assets/img/dc-logo.png" alt="dc-logo.png">
+            </figure>
+            <ul>
+                <li v-for="list in HeaderList" :key="HeaderList.text"><a href="#">{{ list.text }}</a></li>
+            </ul>
+        </div>
+    </header>
 </template>
 
-<style>
+<style scoped lang="scss">
+div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 100px;
 
+    figure {
+        width: 20%;
+    }
+
+    ul {
+        display: flex;
+        margin-left: 500px;
+        list-style-type: none;
+
+        li {
+            margin-right: 10px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+    }
+}
 </style>
