@@ -51,7 +51,7 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <figure>
+                <figure class="figure-jumbotron">
                     <img class="img-jumbotron" src="../assets/img/dc-logo.png" alt="dc-logo.png">
                 </figure>
             </section>
@@ -61,7 +61,7 @@ export default {
                 <button type="button">SIGN UP NOW!</button>
                 <div>
                     <h2>FOLLOW US</h2>
-                    <figure class="">
+                    <figure>
                         <a href="">
                             <img src="../assets/img/footer-facebook.png" alt="">
                         </a>
@@ -109,6 +109,7 @@ export default {
     .index-recap {
         @include container;
         display: flex;
+        position: relative;
 
         a {
             color: $color-white;
@@ -138,7 +139,11 @@ export default {
 
 }
 
-figure {
+.figure-jumbotron {
+    z-index: 1;
+    position: absolute;
+    left: 628px;
+    bottom: -72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,10 +151,9 @@ figure {
     width: 500px;
 
     .img-jumbotron {
-        width: 400px;
+        width: 500px;
         transform: rotate(-30deg);
         opacity: 0.6;
-        object-position: 10%;
     }
 
 }
@@ -157,6 +161,8 @@ figure {
 .navbar-footer {
     height: 150px;
     background-color: rgb(48, 48, 48);
+    position: relative;
+    z-index: 2;
 
     section {
         @include container;
@@ -171,7 +177,6 @@ figure {
             align-items: center;
 
             figure {
-                height: 80px;
                 width: 50px;
             }
         }
@@ -186,6 +191,7 @@ figure {
 
         h2 {
             color: $color-blue ;
+            margin-right: 20px;
         }
     }
 

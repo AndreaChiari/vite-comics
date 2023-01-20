@@ -19,6 +19,11 @@ export default {
 @use '../assets/scss/colors.scss' as *;
 @use '../assets/scss/mixin.scss' as *;
 
+main {
+    position: relative;
+    z-index: 2;
+}
+
 div {
     background-color: $color-black;
     width: 100%;
