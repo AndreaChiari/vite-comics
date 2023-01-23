@@ -13,22 +13,44 @@ export default {
 
 <template>
     <main>
-        <div>
+        <div class="jumbotron">
+            <button class="jumbo-button"> CURRENT SERIES</button>
+        </div>
+        <div class="card-container">
             <section class="content">
                 <MainCard v-for="card in cards" :key="card.series" :card="card"></MainCard>
-                <button> LOAD MORE </button>
+                <button class="button-cards"> LOAD MORE </button>
             </section>
         </div>
         <section></section>
     </main>
 </template>
 
+
 <style scoped lang="scss">
 @use '../assets/scss/colors.scss' as *;
 @use '../assets/scss/mixin.scss' as *;
 
+.jumbotron {
+    height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    position: relative;
 
-button {
+    .jumbo-button {
+        border: 1px solid $color-blue;
+        padding: 5px 40px;
+        background-color: $color-blue;
+        color: $color-white;
+        cursor: pointer;
+        position: absolute;
+        font-size: 150%;
+        bottom: -20px;
+        left: 17%;
+    }
+
+}
+
+.button-cards {
     border: 1px solid $color-blue;
     padding: 5px 40px;
     background-color: $color-blue;
@@ -46,7 +68,7 @@ main {
 
 }
 
-div {
+.card-container {
     background-color: $color-black;
     width: 100%;
 
@@ -55,7 +77,7 @@ div {
         min-height: 100px;
         display: flex;
         flex-wrap: wrap;
-        padding-top: 20px;
+        padding-top: 50px;
         padding-bottom: 60px;
 
 
